@@ -13,8 +13,8 @@ class EmployeeConfiguration {
     @Bean
     CommandLineRunner initDatabase(EmployeeRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.save(new Employee("Michael Gira", "singer")));
-            log.info("Preloading " + repository.save(new Employee("Ted Parsons", "drummer")));
+            log.info("Preloading " + repository.save(new Employee("Michael", "Gira", "singer")));
+            log.info("Preloading " + repository.save(new Employee("Ted", "Parsons", "drummer")));
         };
     }
 }
