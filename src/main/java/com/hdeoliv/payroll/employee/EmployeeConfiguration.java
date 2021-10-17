@@ -11,7 +11,7 @@ class EmployeeConfiguration {
     private static final Logger log = LoggerFactory.getLogger(EmployeeConfiguration.class);
 
     @Bean
-    CommandLineRunner initDatabase(EmployeeRepository repository) {
+    CommandLineRunner initEmployeeDatabase(EmployeeRepository repository) {
         return args -> {
             log.info("Preloading " + repository.save(new Employee("Michael", "Gira", "singer")));
             log.info("Preloading " + repository.save(new Employee("Ted", "Parsons", "drummer")));
